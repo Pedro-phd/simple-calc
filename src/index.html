@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calc in JS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="visor-container">
+                <input type="text" class="visor visor-top" id="visor-secundario"> 
+                <input type="text" class="visor visor-bottom" placeholder="0" id="visor-principal"> 
+            </div>
+            <div class="numpad">
+                <button class="btn extra-large primary" onclick="clearVisor()">C</button>
+                <button class="btn primary" id="history-btn" onclick="historyShow()">H</button>
+                <button class="btn primary" onClick="addValue('/')">/</button>
+            </div>
+            <div class="numpad">
+                <button class="btn" onClick="addValue('1')">1</button>
+                <button class="btn" onClick="addValue('2')">2</button>
+                <button class="btn" onClick="addValue('3')">3</button>
+                <button class="btn primary" onClick="addValue('+')">+</button>
+            </div>
+            <div class="numpad">
+                <button class="btn" onClick="addValue('4')">4</button>
+                <button class="btn" onClick="addValue('5')">5</button>
+                <button class="btn" onClick="addValue('6')">6</button>
+                <button class="btn primary" onClick="addValue('-')">-</button>
+            </div>
+            <div class="numpad">
+                <button class="btn" onClick="addValue('7')">7</button>
+                <button class="btn" onClick="addValue('8')">8</button>
+                <button class="btn" onClick="addValue('9')">9</button>
+                <button class="btn primary" onClick="addValue('*')">*</button>
+            </div>
+            <div class="numpad">
+                <button class="btn extra-large" onClick="addValue('0')">0</button>
+                <button class="btn primary" onClick="addValue('.')">.</button>
+                <button class="btn primary" onclick="calc()">=</button>
+            </div>
+        </div>
+        <div id="history">
+            <h3>Historico</h3>
+            <div ></div>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
